@@ -2,11 +2,12 @@
 
 Dictionary::Dictionary()
 {
-	Table.empty();
+
 }
 
 Dictionary::~Dictionary()
 {
+	Table.clear();
 }
 
 void Dictionary::Init()
@@ -104,6 +105,22 @@ void Dictionary::Init()
 		L'\u1ECD',
 		L'\u1ECE',
 		L'\u1ECF',
+		L'\u1ED0',
+		L'\u1ED1',
+		L'\u1ED2',
+		L'\u1ED3',
+		L'\u1ED4',
+		L'\u1ED5',
+		L'\u1ED6',
+		L'\u1ED7',
+		L'\u1ED8',
+		L'\u1ED9',
+		L'\u1EDA',
+		L'\u1EDB',
+		L'\u1EDC',
+		L'\u1EDD',
+		L'\u1EDE',
+		L'\u1EDF',
 		L'\u1EE0',
 		L'\u1EE1',
 		L'\u1EE2',
@@ -134,15 +151,15 @@ void Dictionary::Init()
 		Table.resize(temp.size() + 256);
 
 		for (int i = 0; i < 256; i++)
-			Table[i] += wchar_t(i);
+			Table[i] = wchar_t(i);
 		for (int i = 256; i < temp.size() + 256; i++)
-			Table[i] += temp[i];
+			Table[i] = temp[i - 256];
 }
 
 int Dictionary::Find_Pos(wstring temp)
 {
 	for (int i = 0; i < Table.size(); i++)
-		if (Table.at(i) == temp)
+		if (Table[i].compare(temp) == 0)
 			return i;
 	return -1;
 }

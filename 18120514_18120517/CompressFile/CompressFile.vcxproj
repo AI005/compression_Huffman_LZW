@@ -112,11 +112,13 @@
   <ItemGroup>
     <ClInclude Include="Dictionary.h" />
     <ClInclude Include="LZW.h" />
+    <ClInclude Include="Non-unicode_Dictionary.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dictionary.cpp" />
     <ClCompile Include="LZW.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Non-unicode_Dictionary.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

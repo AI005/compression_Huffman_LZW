@@ -21,6 +21,9 @@
     <ClInclude Include="LZW.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Non-unicode_Dictionary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -30,7 +33,10 @@
       <Filter>Resource Files</Filter>
     </ClCompile>
     <ClCompile Include="LZW.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Non-unicode_Dictionary.cpp">
+      <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
