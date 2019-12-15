@@ -7,7 +7,7 @@
 #include <io.h>
 #include <fcntl.h>
 #include <unordered_map>
-
+#include <string>
 class LZW
 {	
 public:
